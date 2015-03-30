@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)https://notendur.hi.is/~hh/kennsla/tgr/Angel/HIspjald.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style type="text/css">
+    canvas { background: blue; }
+</style>
+
+<!--<embed src="sounds/trisis.mp3" VOLUME="25" width="400" height="90" hidden="true" loop ="true" autostart="true" /></embed>
+!-->
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+attribute  vec4 vPosition;
+attribute  vec4 vColor;
+varying vec4 fColor;
+
+uniform mat4 rotation;
+
+void main() 
+{
+    fColor = vColor;
+    gl_Position = rotation * vPosition;
+} 
+</script>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+
+precision mediump float;
+   
+varying vec4 fColor;
+
+void
+main()
+{
+    gl_FragColor = fColor;
+}
+</script>
+
+<script type="text/javascript" src="./HIspjald_files/webgl-utils.js"></script>
+<script type="text/javascript" src="./HIspjald_files/initShaders.js"></script>
+<script type="text/javascript" src="./HIspjald_files/MV.js"></script>
+<script type="text/javascript" src="./HIspjald_files/spawn.js"></script>
+
+
+</head><body>
+<canvas id="gl-canvas" width="512" height="512">
+Oops ... your browser doesn't support the HTML5 canvas element
+</canvas>
+
+<div id="UMS_TOOLTIP" style="position: absolute; cursor: pointer; z-index: 2147483647; top: -100000px; left: -100000px; background: transparent;"><img id="ums_img_tooltip" class="UMSRatingIcon" src=""></div></body><umsdataelement id="UMSSendDataEventElement"></umsdataelement></html>
