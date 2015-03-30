@@ -149,7 +149,7 @@ window.onload = function init()
             case 65:    // A
                 // breytum stöðu kubbs á x-ás (mínus)
                 if(xplacement > -0.125){
-                    destroysound.play();
+                    movesound.play();
                     xplacement -= 0.05;
                 }
                 break;
